@@ -14,6 +14,7 @@ df = spark.read.csv(
 )
 names_df = df.select('name')
 names_df.show()
+# listings.filter(listings["name"].isNotNull())
 
 #%%
 names_df = names_df.dropna(subset='name')
